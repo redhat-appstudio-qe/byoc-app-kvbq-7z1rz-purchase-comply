@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: oonz
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-nldh-tenant/byoc-app-kvbq/oonz@sha256:8c36e09a328d6d18141a248bd5dbd1fdb9a877a26c833cc0fd5055ddaf9c6c77
         name: my-java-quarkus
         ports:
         - containerPort: 8081
