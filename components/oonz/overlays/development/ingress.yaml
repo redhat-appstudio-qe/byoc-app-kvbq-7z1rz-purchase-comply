@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: oonz
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: oonz
+    app.kubernetes.io/part-of: byoc-app-kvbq
+  name: oonz
+spec:
+  rules:
+  - host: oonz-byoc-nldh-tenant.apps.22aaa2c04fdf72749771.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: oonz
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
